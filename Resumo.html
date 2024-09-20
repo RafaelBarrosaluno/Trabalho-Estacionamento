@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title> Estacionamento </title>
+        <script src="JS/javinha.js"></script>
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="icon" href="IMG/logo.png">
+    </head>
+    <body>
+        <h1> Resumo do cliente: </h1>
+    <p id="resumo"></p>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const nome = params.get('nome');
+        const placa = params.get('placa');
+        const carro = params.get('carro');
+        const date = params.get('date');
+        const valor = params.get('valor');
+        const valorTotal = date * valor;
+
+        let desconto = 0;
+        if (valorTotal > 150) {
+            desconto = valorTotal * 0.10;
+        }
+
+        const valorFinal = valorTotal - desconto;
+
+        document.getElementById('resumo').innerHTML = `
+            Nome do Cliente: ${cliente} <br>
+            Placa do Carro: ${placa} <br>
+            Modelo do Carro: ${modelo} <br>
+            Dias: ${dias} <br>
+            Valor da Diária: R$ ${diaria.toFixed(2)} <br>
+            Valor Total: R$ ${valorTotal.toFixed(2)} <br>
+            Desconto: R$ ${desconto.toFixed(2)} <br>
+            Valor Final: R$ ${valorFinal.toFixed(2)}
+        `;
+    </script>
+</body>
+</html>
+   
