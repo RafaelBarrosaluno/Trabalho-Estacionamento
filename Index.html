@@ -1,35 +1,34 @@
 <html>
-    <head>
-        <title> Estacionamento </title>
-        <script src="JS/javinha.js"></script>
-        <link rel="stylesheet" href="CSS/style.css">
-        <link rel="icon" href="IMG/logo.png">
-    </head>
-    <body>
-        <h1>Bem vindo ao sistema de estacionamento de carros</h1>
+<head>
+    <title> Estacionamento </title>
+    <script src="JS/javinha.js"></script>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" href="IMG/logo.png">
+</head>
+<body>
+    <h1>Bem vindo ao sistema de estacionamento de carros</h1>
     <img src="IMG/estacionamento.png" width="800" height="300" class="image">
-        <h1> Dados do cliente: </h1>
+    <h1> Dados do cliente: </h1>
+    <br>
+    <div class="form">
+        Digite o nome do cliente: <br/>
+        <input type="text" id="nome" class="nome"/><br/>
         <br>
-            <div class="form">
-            Digite o nome do cliente: <br/>
-            <input type="text" id="nome" class="nome"/><br/>
-            <br>
-            Digite a placa do carro: <br/>
-            <input type="text" id="placa" class="placa"/><br/>
-            <br>
-            Digite qual é o carro: <br/>
-            <input type="text" id="carro" class="carro"/><br/>
-            <br>
-            Digite quantos dias ele irá ficar: <br/>
-            <input type="number" id="date" class="date"/><br/>
-            <br>
-            Digite o valor da diária:<br/>
-            <input type="number" id="valor" class="valor"/><br/>
-            <br>
-           
-            <button onClick="calcularpag()">Calcular </button> </a> <button> Limpar </button> <button> Sair </button>
-            
-    
-        </div>
-    </body>
+        Digite a placa do carro: <br/>
+        <input type="text" id="placa" class="placa"/><br/>
+        <br>
+        Digite qual é o carro: <br/>
+        <input type="text" id="carro" class="carro"/><br/>
+        <br>
+        Digite quantos dias ele irá ficar: <br/>
+        <input type="number" id="date" class="date"/><br/>
+        <br>
+        Digite o valor da diária:<br/>
+        <input type="number" id="valor" class="valor"/><br/>
+        <br>
+        <button onClick="calcularpag()">Calcular</button> 
+        <button onClick="limparCampos()">Limpar</button> 
+        <button onClick="sair()">Sair</button>
+    </div>
+</body>
 </html>
